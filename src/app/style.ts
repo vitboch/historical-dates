@@ -87,7 +87,6 @@ const GlobalStyle = createGlobalStyle`
 
   abbr[title] {
     border-bottom: none; /* 1 */
-    text-decoration: underline; /* 2 */
     text-decoration: underline dotted; /* 2 */
   }
 
@@ -405,17 +404,29 @@ const GlobalStyle = createGlobalStyle`
 
   :root {
     --bg-color: #E5E5E5;
-    --black-blue-1: #42567a1a;
-
+    --bg-color-m: #F4F5F9;
+    --bg-color-line: #C7CDD9;
+    --white: #FFF;
+    --fuschia: #EF5DA8;
+    --iris: #5D5FEF;
+    --blue: #3877EE;
+    --black-blue: #42567A;
+    --black-blue-1: #42567A1a;
+    --black-blue-4: #42567A66;
   }
 
   body {
+    margin: 0 148px 0 285px;
     min-width: 320px;
     font-family: "PTSans", sans-serif;
     font-weight: 400;
-    background-color: var(--bg-color)
+    background-color: var(--bg-color);
+
+    @media (max-width: 1024px) {
+      margin: 0;
+      background-color: var(--bg-color-m);
+    }
   }
-  
 `
 
 export default GlobalStyle
